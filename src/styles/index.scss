@@ -1,0 +1,71 @@
+﻿* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;  /* Konqueror */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  //min-height: 100%;
+}
+
+body {
+  font: 16px verdana;
+  color: map-get($body, fc);
+  background: map-get($body, bg);
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+}
+
+/*
+.shipments {
+  width: 100%;
+  padding: 1rem;
+}
+*/
+
+
+/*
+aside {
+  background: #455A64;
+  display: none;
+  width: 400px;
+  margin: 0 0 0 auto;
+  padding: .5rem;
+}
+*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  51% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
