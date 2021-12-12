@@ -35,6 +35,15 @@ body {
 
 .page {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+
+  &:not(.home) {
+    overflow-y: scroll;
+  }
 }
 
 /*

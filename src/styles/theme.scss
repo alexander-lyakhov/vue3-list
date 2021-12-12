@@ -2,39 +2,74 @@
 $fc-secondary: #c0c0c0;
 $fc-middle: #808080;
 
-$fc-title: #406080;
 $fc-accent: #f0c000;
 $bg-accent: #ea0;
 
 $theme: (
   body: (
     fc: $fc-primary,
+    bg: #606060,
+  ),
+
+  header: (
+    fc: $fc-secondary,
     bg: #404040,
   ),
-  parcel: (
-    fc: #303030,
-    bg: #f0f0f0,
 
-    header: (
+  list: (
+    fc: $fc-primary,
+    bg: #383838,
+
+    title: (
+      fc: #000,
+      bg: $fc-primary,
+    ),
+
+    nav: (
+      fc: $fc-secondary,
+
+      selected: (
+        fc: $fc-accent
+      ),
+    ),
+
+    item: (
       fc: $fc-primary,
-      bg: #406080,
-    ),
+      bg: #484848,
 
-    body: (
-      fc: #303030,
-      bg: #e0e0e0,
-    ),
+      hover: (
+        fc: #000,
+        bg: $bg-accent,
+      ),
 
-    footer: (
-      fc: #303030,
-      bg: #f0f0f0,
+      primary: (
+        fc: $fc-primary,
+
+        hover: (
+          fc: #000,
+        )
+      ),
+
+      secondary: (
+        fc: $fc-secondary,
+
+        hover: (
+          fc: #404040,
+        )
+      )
     ),
   )
 );
 
 $body: map-get($theme, body);
-
-$parcel: map-get($theme, parcel);
-$parcel-header: map-get($parcel, header);
-$parcel-body: map-get($parcel, body);
-$parcel-footer: map-get($parcel, footer);
+$header: map-get($theme, header);
+$list: map-get($theme, list);
+$list-title: map-get($theme, list, title);
+$list-nav: map-get($theme, list, nav);
+$list-nav-selected: map-get($theme, list, nav, selected);
+$list-item: map-get($theme, list, item);
+$list-item-hover: map-get($theme, list, item, hover);
+$list-item-primary: map-get($theme, list, item, primary);
+$list-item-primary-hover: map-get($theme, list, item, primary, hover);
+$list-item-secondary: map-get($theme, list, item, secondary);
+$list-item-secondary-hover: map-get($theme, list, item, secondary, hover);
